@@ -1,0 +1,375 @@
+:root {
+    --primary-color: #FFB84C;
+    --secondary-color: #1FBFBF;
+    --font-size: 16px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    font-family:'Inter', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+    font-size: var(--font-size);
+}
+
+header {
+    background-color: #000;
+    color: var(--primary-color);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    flex-grow: 1;
+    margin: 0 1rem;
+    position: relative;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    background: transparent;
+    margin-right: 0.5rem;
+    flex-grow: 1;
+    padding: 0.5rem;
+}
+
+.search-icon, .voice-search {
+    color: #000;
+    opacity: 0.6;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+}
+
+.voice-search {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.menu-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #111111;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.menu a{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.menu a:hover {
+    background-color: var(--primary-color);
+    color: #000;
+}
+
+.menu.open {
+    right: 0;
+}
+
+.close-button {
+    position: absolute;
+    bottom: 1rem;
+    width: calc(100% - 2rem);
+    background-color: var(--primary-color);
+    color: #000;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+main {
+    padding: 2rem;
+}
+
+.doctor-profile {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.image-container {
+    flex: 1;
+}
+
+.doctor-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.doctor-info {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+    letter-spacing: -0.18rem;
+    font-style: bold;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    color: #0f0f0f;
+    font-style: italic;
+}
+
+.book-now {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-style: bold;
+    width: 10vw;
+    height: 7vh;
+    background-color: #000;
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.book-now span {
+    position: absolute;
+    opacity: 0.6;
+    font-size: 0.8rem;
+    padding-bottom: 1vh;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.customization-form { 
+    display: block; 
+    width: 100%; 
+    margin: 5vh;
+}
+
+.customization-button {
+    z-index: -1;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.customization-button a {
+    background-color: #000;
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.preview {
+    flex: 1;
+    border: 10px solid #111111;
+    border-radius: 15px;
+    padding: 2%;
+}
+
+.preview-content {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.preview-content h1 {
+    color: var(--secondary-color);
+}
+
+.preview-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+
+.back-button {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.booking-form, .customization-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="time"],
+input[type="color"],
+input[type="range"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-button {
+    background-color: var(--primary-color);
+    color: #000;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .doctor-profile {
+        flex-direction: column;
+    }
+
+    .image-container, .doctor-info {
+        flex: none;
+        width: 100%;
+    }
+
+    .search-bar {
+        display: none;
+    }
+}
+
+/* Shine effect for buttons */
+.submit-button,
+.book-now,
+.customization-button a {
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-button::after,
+.book-now::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 50%;
+    height: 200%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(30deg);
+    transition: left 0.3s ease;
+}
+
+.submit-button:hover::after,
+.book-now:hover::after{
+    animation: shine 1s forwards;
+}
+
+@keyframes shine {
+    to {
+        left: 150%;
+    }
+}
+
+.customization-button a {
+    position: relative;
+}
+
+.customization-button a::before {
+    content: "CUSTOMIZATION";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent;
+    background: linear-gradient(
+        90deg,
+        var(--primary-color) 0%,
+        #fff 50%,
+        var(--primary-color) 100%
+    );
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.customization-button a:hover::before {
+    opacity: 1;
+    animation: shineText 2s infinite;
+}
+
+@keyframes shineText {
+    from {
+        background-position: 100% 50%;
+    }
+    to {
+        background-position: 0% 50%;
+    }
+}
+
+

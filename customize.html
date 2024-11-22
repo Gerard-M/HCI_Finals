@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Customize - Vision Oasis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Vision Oasis</div>
+        <a href="index.html" class="back-button">← Back to Home</a>
+    </header>
+    <main style="display: flex; gap: 2rem; padding: 2rem;">
+        <div class="preview" style="flex: 1;">
+            <h3>Preview</h3>
+            <div class="preview-content">
+                <h1>Sample Heading</h1>
+                <p>This is a sample paragraph to preview the changes in real-time.</p>
+                <a href="#" class="preview-button">Sample Button</a>
+            </div>
+        </div>
+        <div class="customization-form" style="flex: 1;">
+            <h2>Customize Website</h2>
+            <form id="customizeForm">
+                <div class="form-group">
+                    <label for="primary-color">Primary Color</label>
+                    <input type="color" id="primary-color" name="primary-color" value="#FFB84C">
+                </div>
+                <div class="form-group">
+                    <label for="secondary-color">Secondary Color</label>
+                    <input type="color" id="secondary-color" name="secondary-color" value="#333333">
+                </div>
+                <div class="form-group">
+                    <label for="font-size">Font Size</label>
+                    <input type="range" id="font-size" name="font-size" min="12" max="24" value="16">
+                    <span id="font-size-value">16px</span>
+                </div>
+                <button type="submit" class="submit-button">Apply Changes</button>
+            </form>
+        </div>
+    </main>
+    <script src="customize.js"></script>
+</body>
+</html>

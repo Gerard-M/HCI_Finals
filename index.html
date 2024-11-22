@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Vision Oasis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Vision Oasis</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <span class="search-icon">🔍</span>
+            <span class="voice-search">Ctrl + M 🎤</span>
+        </div>
+        <div class="menu-icon">☰</div>
+        <nav class="menu">
+            <a href="booking.html">Book Appointment</a>
+            <a href="customize.html">Customize</a>
+            <button class="close-button">Close</button>
+        </nav>
+
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const menu = document.querySelector('.menu');
+        const closeButton = document.querySelector('.close-button');
+        menuIcon.addEventListener('click', function() {
+            menu.classList.toggle('open');
+        });
+        closeButton.addEventListener('click', function() {
+            menu.classList.remove('open');
+        });
+    </script>
+    </header>
+    <main>
+        <div class="doctor-profile">
+            <div class="image-container">
+                <img src="samp_pic.png" alt="Dr. Kwakwak" class="doctor-image">
+            </div>
+            <div class="doctor-info">
+                <h1>DR. KWAKWAK, OPH</h1>
+                <h2>Ophthalmologist</h2>
+                <p>Welcome to Your Vision Oasis! With over 20 years of experience in the world of eye care, I'm here to help you see the world in all its vibrant colors! Whether you need a routine check-up, expert advice, or advanced treatment options, I blend professionalism with a touch of fun to make your visit as enjoyable as possible. Let's embark on a journey to better vision together—because life is too beautiful to miss a single detail!</p>
+                <a href="booking.html" class="book-now">BOOK NOW <span>Ctrl + B</span></a>
+            </div>
+        </div>
+    </main>
+    <div class="customization-button">
+        <a href="customize.html">CUSTOMIZATION</a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
